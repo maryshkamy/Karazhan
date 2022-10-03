@@ -40,3 +40,8 @@ install-bundler-dependencies: # Install Bundler dependencies
 .PHONY: update-bundler-dependencies
 update-bundler-dependencies: # Update Bundler dependencies
 	$(BUNDLE) update
+
+.PHONY: setup-fastlane
+setup-fastlane: # Setup Fastlane on the project
+	echo "gem 'fastlane'" >> Gemfile
+	$(MAKE) install-bundler-dependencies
