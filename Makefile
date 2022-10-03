@@ -8,3 +8,9 @@ FASTLANE=$(BUNDLE) exec fastlane
 .PHONY: help
 help: # Show this command list
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":[^#]*? #| #"}; {printf "%-57s%s\n", $$1 $$3, $$2}'
+
+.PHONY: setup-homebrew
+setup-homebrew: # Setup Homebrew on the machine
+	brew update
+	brew upgrade
+	brew cleanup
