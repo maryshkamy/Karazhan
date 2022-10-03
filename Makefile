@@ -14,3 +14,12 @@ setup-homebrew: # Setup Homebrew on the machine
 	brew update
 	brew upgrade
 	brew cleanup
+
+.PHONY: install-rbenv
+install-rbenv: # Install rbenv on the project folder
+	brew install rbenv
+
+.PHONY: setup-rbenv
+setup-rbenv: # Setup rbenv on the project folder
+	rbenv install -s
+	rbenv exec gem install bundler
