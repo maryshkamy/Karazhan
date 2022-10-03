@@ -23,3 +23,20 @@ install-rbenv: # Install rbenv on the project folder
 setup-rbenv: # Setup rbenv on the project folder
 	rbenv install -s
 	rbenv exec gem install bundler
+
+.PHONY: install-bundler
+install-bundler: # Install Bundler on the machine
+	sudo gem install bundler
+
+.PHONY: setup-bundler
+setup-bundler: # Setup Bundler on the project and create Gemfile
+	$(BUNDLE) init
+	$(MAKE) install-bundler-dependencies
+
+.PHONY: install-bundler-dependencies
+install-bundler-dependencies: # Install Bundler dependencies
+	$(BUNDLE) install
+
+.PHONY: update-bundler-dependencies
+update-bundler-dependencies: # Update Bundler dependencies
+	$(BUNDLE) update
