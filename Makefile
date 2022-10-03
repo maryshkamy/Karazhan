@@ -45,3 +45,14 @@ update-bundler-dependencies: # Update Bundler dependencies
 setup-fastlane: # Setup Fastlane on the project
 	echo "gem 'fastlane'" >> Gemfile
 	$(MAKE) install-bundler-dependencies
+
+.PHONY: setup
+setup: # Install dependencies and prepare development configuration
+	$(MAKE) setup-homebrew
+	$(MAKE) install-rbenv
+	$(MAKE) setup-rbenv
+	$(MAKE) install-bundler-dependencies
+
+.PHONY: open
+open: # Open xcodeproj/workspace in Xcode
+	@[ -f ./${WORKSPACE_NAME} ] && open ./${WORKSPACE_NAME} || open ./${PROJ_NAME} || echo Error to open Xcode project	
