@@ -55,4 +55,12 @@ setup: # Install dependencies and prepare development configuration
 
 .PHONY: open
 open: # Open xcodeproj/workspace in Xcode
-	@[ -f ./${WORKSPACE_NAME} ] && open ./${WORKSPACE_NAME} || open ./${PROJ_NAME} || echo Error to open Xcode project	
+	@[ -f ./${WORKSPACE_NAME} ] && open ./${WORKSPACE_NAME} || open ./${PROJ_NAME} || echo Error to open Xcode project
+
+.PHONY: clear
+clear: # Clear cache
+	xcodebuild clean -alltargets
+	rm -rf ./Pods
+	rm -rf ./Carthage
+	rm -rf ./vendor/bundle
+	rm -rf ./Templates
