@@ -7,10 +7,19 @@
 This is a reference for future projects on how to setup your iOS project. As a library that contains a lot of books to guide you in a specific subject.
 
 ---
-## Installation
+## Requirements
 
 This project needs [Homebrew](https://brew.sh/) installed on your machine to run some **Makefile** commands. To install Homebrew, simply use:
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+---
+## Setup
+
+After cloning it, on the project directory run the setup command using the terminal:
+
+```
+make setup
 ```

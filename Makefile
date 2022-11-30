@@ -51,7 +51,7 @@ setup: # Install dependencies and prepare development configuration
 	$(MAKE) setup-homebrew
 	$(MAKE) install-rbenv
 	$(MAKE) setup-rbenv
-	$(MAKE) install-bundler-dependencies
+	# $(MAKE) install-bundler-dependencies
 
 .PHONY: open
 open: # Open xcodeproj/workspace in Xcode
