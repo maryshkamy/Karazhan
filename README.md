@@ -18,7 +18,7 @@ To install Homebrew, open a new `Terminal` window. Type the above command and pr
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-#### ● Configure your Git username/email
+#### • Configure your Git username/email
 
 1. Open `Terminal`.
 2. Set your username:
@@ -42,7 +42,7 @@ You can access and write data in repositories on GitHub.com using SSH (Secure Sh
 
 For more information about Connect with SSH, see [Authentication / Connect with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) on GitHub Docs.
 
-#### ● Generate a new SSH key
+#### • Generate a new SSH key
 
 1. Open `Terminal`.
 2. Paste the text below, replacing the email used in the example with your GitHub email address.
@@ -53,7 +53,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 For more information about it, see [Generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) on GitHub Docs.
 
-#### ● Adding your SSH key to the ssh-agent
+#### • Adding your SSH key to the ssh-agent
 
 1. Open `Terminal`.
 2. Start the ssh-agent in the background.
@@ -89,7 +89,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
 For more information about it, see [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) on GitHub Docs.
 
-#### ● Adding a new SSH key to your account
+#### • Adding a new SSH key to your account
 
 1. OOpen `Terminal`.
 2. Copy the SSH public key to your clipboard.
